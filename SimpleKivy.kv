@@ -1,0 +1,27 @@
+# File name: main.py
+#:kivy 1.10.0
+
+<Button>
+  font_size: 40
+
+<Widgets>:
+  canvas:
+    Color:
+      rgba: 1, 1, 1, 1
+    Rectangle: #woohoo!!!
+      size: self.size
+      pos: self.pos
+
+  Button:
+    size: 100,75
+    pos:  (root.right/2) - (self.width/2),0
+    text: "Kek"
+    color:  0,1,0,1
+    on_touch_down: print("hello")
+
+    Image:
+      source: "images/colourChange/orangegreen/orangegreen.gif"
+      anim_loop: 0
+      anim_delay: 0.05
+      allow_stretch: True
+      pos: (root.right/2) - (self.width/2), (root.top*0.9) - (self.height/2)
